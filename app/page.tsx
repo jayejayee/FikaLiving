@@ -39,11 +39,14 @@ export default async function Home() {
 
         <section className="intro-band" id="story">
           <p className="section-kicker">A little about us</p>
-          <div className="intro-content">
-            <h2>Furniture that<br /><em>holds a moment.</em></h2>
-            <div>
-              <p>- Living is a small, independent shop making one-of-a-kind furniture and cabinetry for the spaces where life actually happens. We work with warm, honest materials and the belief that the best pieces become witnesses to your everyday.</p>
-              <a className="text-link" href="#contact">Meet the makers <span aria-hidden="true">↗</span></a>
+          <div className="intro-layout">
+            <div className="intro-logo" aria-label="FL logo" role="img"><span>F</span><span>L</span></div>
+            <div className="intro-content">
+              <h2>Furniture that<br /><em>holds a moment.</em></h2>
+              <div>
+                <p>- Living is a small, independent shop making one-of-a-kind furniture and cabinetry for the spaces where life actually happens. We work with warm, honest materials and the belief that the best pieces become witnesses to your everyday.</p>
+                <a className="text-link" href="#contact">Meet the makers <span aria-hidden="true">↗</span></a>
+              </div>
             </div>
           </div>
         </section>
@@ -54,11 +57,13 @@ export default async function Home() {
             <p className="section-aside">A small collection of made-to-order furniture<br />for daily rituals and the years ahead.</p>
           </div>
           <div className="gallery-grid">
-            <a className="gallery-card gallery-tall" href="#contact"><div className="gallery-image gallery-chair" /><span className="gallery-label"><strong>The cutting board</strong><small>Walnut</small></span></a>
-            <a className="gallery-card" href="#contact"><div className="gallery-image gallery-table" /><span className="gallery-label"><strong>The Side Table</strong><small>Pine / Brazilian Rosewood</small></span></a>
-              <a className="gallery-card" href="#contact"><div className="gallery-image gallery-stool" /><span className="gallery-label"><strong></strong><small></small></span></a>
+            <a className="gallery-card gallery-tall gallery-cutting-board" href="#contact"><div className="gallery-image gallery-chair" /><span className="gallery-label"><strong>The cutting board</strong><small>Walnut</small></span></a>
+            <a className="gallery-card gallery-side-table" href="#contact"><div className="gallery-image gallery-table" /><span className="gallery-label"><strong>The Side Table</strong><small>Pine / Brazilian Rosewood</small></span></a>
+              <a className="gallery-card gallery-side-table-finished" href="#contact"><div className="gallery-image gallery-stool" /><span className="gallery-label"><strong></strong><small></small></span></a>
               <a className="gallery-card gallery-wide" href="#contact"><div className="gallery-image gallery-shelf" /><span className="gallery-label"><strong>Wooden toy car</strong><small>Handmade / solid wood</small></span></a>
-            <a className="gallery-card" href="#contact"><div className="gallery-image gallery-kitchen" /><span className="gallery-label"><strong>Kitchen remodel</strong><small>Custom cabinetry / warm wood</small></span></a>
+            <a className="gallery-card gallery-kitchen" href="#contact"><div className="gallery-image gallery-kitchen-image" /><span className="gallery-label"><strong>Kitchen remodel</strong><small>Custom cabinetry / warm wood</small></span></a>
+              <a className="gallery-card gallery-phone-stand" href="#contact"><div className="gallery-image gallery-phone-stand-image" /><span className="gallery-label"><strong>Phone stand</strong><small>Wireless charging</small></span></a>
+              <a className="gallery-card gallery-mantle-clock" href="#contact"><div className="gallery-image gallery-mantle-clock-image" /><span className="gallery-label"><strong>Mantle clock</strong><small>Handmade / solid wood</small></span></a>
           </div>
         </section>
 

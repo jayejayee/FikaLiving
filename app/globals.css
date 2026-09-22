@@ -33,7 +33,12 @@ h1 em, h2 em { color: var(--blue); font-family: 'Playfair Display', Georgia, ser
 .hero-note { align-items: flex-start; bottom: 75px; display: flex; font-family: 'DM Mono', monospace; font-size: 9px; gap: 15px; left: 6vw; line-height: 1.4; position: absolute; text-transform: uppercase; }
 .hero-note span:first-child { color: var(--blue); font-size: 12px; }
 .intro-band { background: var(--cream); padding: 120px 13vw 125px; }
-.intro-content { display: grid; gap: 14%; grid-template-columns: 1.2fr 1fr; margin-left: 17%; }
+.intro-logo { align-items: center; color: var(--blue); display: flex; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(66px, 8vw, 116px); height: 105px; letter-spacing: -.16em; line-height: .7; margin: -8px 0 30px; position: relative; width: 145px; }
+.intro-logo span:first-child { position: relative; z-index: 1; }
+.intro-logo span:last-child { margin-left: -12px; opacity: .62; }
+.intro-logo::after { background: var(--blue); bottom: 2px; content: ''; height: 1px; left: 4px; opacity: .45; position: absolute; width: 92px; }
+.intro-layout { align-items: start; display: grid; gap: 4%; grid-template-columns: 145px 1fr; }
+.intro-content { display: grid; gap: 14%; grid-template-columns: 1.2fr 1fr; }
 h2 { font-size: clamp(38px, 4.2vw, 64px); line-height: .99; }
 .intro-content p, .process-copy > p, .contact-heading > p { color: var(--muted); font-size: 15px; line-height: 1.7; margin: 6px 0 28px; max-width: 370px; }
 .text-link { border-bottom: 1px solid var(--ink); display: inline-block; font-size: 12px; font-weight: 700; padding-bottom: 7px; }
@@ -48,13 +53,22 @@ h2 { font-size: clamp(38px, 4.2vw, 64px); line-height: .99; }
 .gallery-card:hover .gallery-image { filter: saturate(1.15); transform: scale(.985); }
 .gallery-tall { grid-row: span 2; }
 .gallery-tall .gallery-image { min-height: 718px; }
-.gallery-wide { grid-column: 2; }
+.gallery-cutting-board { grid-column: 1; grid-row: 1 / span 2; }
+.gallery-side-table { grid-column: 1; grid-row: 4; }
+.gallery-side-table-finished { grid-column: 2; grid-row: 4; }
+.gallery-wide { grid-column: 2; grid-row: 2; }
 .gallery-wide .gallery-image { min-height: 345px; }
+.gallery-kitchen { grid-column: 2; grid-row: 1; }
+.gallery-phone-stand { grid-column: 1; grid-row: 3; }
+.gallery-mantle-clock { grid-column: 2; grid-row: 3; }
 .gallery-chair { background-image: url('/images/cutting%20board.png'); }
 .gallery-table { background-image: url('/images/coffetable.png'); }
 .gallery-stool { background-image: url('/images/Coffeetablefinished.png'); }
+.gallery-table, .gallery-stool { background-repeat: no-repeat; background-size: 80% auto; }
 .gallery-shelf { background-image: url('/images/toy%20car.png'); }
-.gallery-kitchen { background-image: url('/images/kitchen%20remodel.png'); }
+.gallery-kitchen-image { background-image: url('/images/kitchen%20remodel.png'); }
+.gallery-phone-stand-image { background-image: url('/images/Phone%20Stand%20wireless%20charging.png'); }
+.gallery-mantle-clock-image { background-image: url('/images/mantleclock.png'); }
 .gallery-label { display: flex; justify-content: space-between; padding: 14px 2px 0; }
 .gallery-label strong { font-size: 13px; }
 .gallery-label small { color: var(--muted); font-family: 'DM Mono', monospace; font-size: 9px; text-transform: uppercase; }
@@ -72,4 +86,4 @@ h2 { font-size: clamp(38px, 4.2vw, 64px); line-height: .99; }
 .contact-form input::placeholder, .contact-form textarea::placeholder { color: #9a9d96; }
 .contact-form .button { align-self: flex-start; margin-top: 5px; }
 .site-footer { align-items: center; border-top: 1px solid var(--line); color: var(--muted); display: flex; font-family: 'DM Mono', monospace; font-size: 9px; justify-content: space-between; letter-spacing: .06em; padding: 28px 5.5vw; text-transform: uppercase; }
-@media (max-width: 760px) { .site-header { height: 78px; padding: 0 6vw; } .main-nav { display: none; } .header-link { font-size: 10px; } .hero-section { display: flex; flex-direction: column; gap: 38px; min-height: auto; padding: 55px 8vw 85px; } .hero-copy { padding-bottom: 0; } .hero-image { min-height: 430px; order: 2; } .hero-note { bottom: 35px; left: auto; right: 8vw; } .intro-band, .work-section, .contact-section { padding-left: 8vw; padding-right: 8vw; } .intro-band { padding-bottom: 90px; padding-top: 90px; } .intro-content, .process-section, .contact-section { display: flex; flex-direction: column; gap: 45px; margin-left: 0; } .section-heading { align-items: flex-start; flex-direction: column; gap: 22px; margin-bottom: 38px; } .section-aside { text-align: left; } .gallery-grid { display: flex; flex-direction: column; } .gallery-tall .gallery-image, .gallery-image, .gallery-wide .gallery-image { min-height: 410px; } .gallery-label { flex-direction: column; gap: 6px; } .process-section { padding: 80px 8vw; } .process-image { min-height: 390px; order: 2; } .contact-section { padding-bottom: 100px; padding-top: 95px; } .site-footer { align-items: flex-start; flex-direction: column; gap: 13px; padding: 25px 8vw; } }
+@media (max-width: 760px) { .site-header { height: 78px; padding: 0 6vw; } .main-nav { display: none; } .header-link { font-size: 10px; } .hero-section { display: flex; flex-direction: column; gap: 38px; min-height: auto; padding: 55px 8vw 85px; } .hero-copy { padding-bottom: 0; } .hero-image { min-height: 430px; order: 2; } .hero-note { bottom: 35px; left: auto; right: 8vw; } .intro-band, .work-section, .contact-section { padding-left: 8vw; padding-right: 8vw; } .intro-band { padding-bottom: 90px; padding-top: 90px; } .intro-layout { display: block; } .intro-logo { margin-left: 0; } .intro-content, .process-section, .contact-section { display: flex; flex-direction: column; gap: 45px; margin-left: 0; } .section-heading { align-items: flex-start; flex-direction: column; gap: 22px; margin-bottom: 38px; } .section-aside { text-align: left; } .gallery-grid { display: flex; flex-direction: column; } .gallery-tall .gallery-image, .gallery-image, .gallery-wide .gallery-image { min-height: 410px; } .gallery-label { flex-direction: column; gap: 6px; } .process-section { padding: 80px 8vw; } .process-image { min-height: 390px; order: 2; } .contact-section { padding-bottom: 100px; padding-top: 95px; } .site-footer { align-items: flex-start; flex-direction: column; gap: 13px; padding: 25px 8vw; } }
