@@ -3,19 +3,23 @@ import ContactForm from "./contact-form";
 
 
 export default async function Home() {
-  const { data: FikaLiving, error } = await supabase
+  const { error } = await supabase
     .from("Inquiries")
     .select("*");
 
   if (error) {
     console.error(error);
   }
-    return (
+
+  return (
     <div className="site-shell">
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Fika Wood home">
           <span className="brand-mark">FL</span>
-          <span>-<br />Living</span>
+          <span className="brand-copy">
+            <span className="brand-name">Fika<br />Living</span>
+            <span className="brand-tagline">Simple moments. Together.</span>
+          </span>
         </a>
         <nav className="main-nav" aria-label="Main navigation">
           <a href="#work">The work</a>
@@ -40,11 +44,14 @@ export default async function Home() {
         <section className="intro-band" id="story">
           <p className="section-kicker">A little about us</p>
           <div className="intro-layout">
-            <div className="intro-logo" aria-label="FL logo" role="img"><span>F</span><span>L</span></div>
+            <div className="intro-brand-block">
+              <div className="intro-logo" aria-label="FL logo" role="img"><span>F</span><span>L</span></div>
+              <p className="intro-tagline">Simple moments. Together.</p>
+            </div>
             <div className="intro-content">
               <h2>Furniture that<br /><em>holds a moment.</em></h2>
               <div>
-                <p>- Living is a small, independent shop making one-of-a-kind furniture and cabinetry for the spaces where life actually happens. We work with warm, honest materials and the belief that the best pieces become witnesses to your everyday.</p>
+                <p>Fika Living is a small, independent shop making one-of-a-kind furniture and cabinetry for the spaces where life actually happens. We work with warm, honest materials and the belief that the best pieces become witnesses to your everyday.</p>
                 <a className="text-link" href="#contact">Meet the makers <span aria-hidden="true">↗</span></a>
               </div>
             </div>
@@ -69,7 +76,7 @@ export default async function Home() {
 
         <section className="process-section">
           <div className="process-image image-frame" role="img" aria-label="Woodworker shaping a piece of timber by hand" />
-          <div className="process-copy"><p className="section-kicker">The - way</p><h2>Built around<br /><em>your everyday.</em></h2><p>Every piece starts with a conversation about how you live. We sketch, select timber, and make carefully in our Angier studio, leaving room for the small details that make something unmistakably yours.</p><a className="text-link" href="#contact">Tell us what you have in mind <span aria-hidden="true">↗</span></a></div>
+          <div className="process-copy"><p className="section-kicker">The Fika way</p><h2>Built around<br /><em>your everyday.</em></h2><p>Every piece starts with a conversation about how you live. We sketch, select timber, and make carefully in our Angier studio, leaving room for the small details that make something unmistakably yours.</p><a className="text-link" href="#contact">Tell us what you have in mind <span aria-hidden="true">↗</span></a></div>
         </section>
 
         <section className="contact-section" id="contact">
@@ -78,7 +85,7 @@ export default async function Home() {
         </section>
       </main>
 
-      <footer className="site-footer"><span>- Living © 2026</span><span>Angier, NC</span><a href="#top">Back to top ↑</a></footer>
+      <footer className="site-footer"><span>Fika Living © 2026</span><span>Angier, NC</span><a href="#top">Back to top ↑</a></footer>
     </div>
   );
 }
