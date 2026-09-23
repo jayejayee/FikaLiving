@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Fika Living monogram">
+  <rect width="512" height="512" rx="52" fill="#1f2925"/>
+  <path d="M156 142h118v36H192v64h74v36h-74v82h-36V142zm184 0h36v230h-36V142z" fill="#f1eee8"/>
+  <path d="M339 142h36v230h-36V142z" fill="#2f6d75" opacity="0.8"/>
+  <path d="M156 339h112v36H156v-36z" fill="#f1eee8" opacity="0.9"/>
+</svg>
